@@ -107,7 +107,7 @@ Brewery Dataset Variable Information
 ** Data Cleaning and Transformation **  
 All data processing was done in R with the following packages  
 
-# Required libraries  
+
 library(tidyverse)  
 library(pwr)  
 library(emmeans)  
