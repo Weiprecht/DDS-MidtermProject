@@ -104,7 +104,25 @@ Brewery Dataset Variable Information
 
 
 
-** Data Cleaning and Transformation **
+** Data Cleaning and Transformation **  
+All data processing was done in R with the following packages  
+
+# Required libraries  
+library(tidyverse)
+library(pwr)
+library(emmeans)
+library(GGally)
+library(ggplot2)
+library(ggthemes)
+library(multcomp)
+library(pairwiseCI)
+library(usmap)
+library(maps)
+library(knitr)
+library(kableExtra)
+library(class)
+library(patchwork)
+library(caret)
 
 - Missing Values: The following missing values were found:
 Beer Dataset: IBU (1005 records), ABV (62 records), Style (4 records)
@@ -112,7 +130,7 @@ Beer Dataset: IBU (1005 records), ABV (62 records), Style (4 records)
 We do not know why there are gaps in the data for the IBU and ABV. So, we assumed that the data was missing at random (MAR) and would be treated as such.
 Missing data imputation - first by seeking open-source information on the values and secondly by taking the median of each state and replacing the remaining missing values with those median values by State.
 - Outliers: No Significant outliers were detected in either dataset
-- Data Transformation: No data transformation has been applied to the original data.
+- Data Transformation: All data transformation was done using R.
 
 ** Additional Notes **  
 Additional Datasets were sourced online and were used to supplement and enhance our analysis. These datasets are optional and not an initial requirement for the analysis:  
@@ -122,7 +140,7 @@ Beer Consumption by State – Used to provide further insights on how much consu
 
 
 
-- Codebook created by: Emmanuel Opoku and Adam Erganbrack
+- Codebook created by: Emmanuel Opoku and Adam Ercanbrack
 - Date: October 25, 2023
 
 # Files contained in the Githhub
