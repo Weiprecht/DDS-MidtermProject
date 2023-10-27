@@ -140,7 +140,7 @@ Beer Consumption by State – Used to provide further insights on how much consu
 
 
 
-- Codebook created by: Emmanuel Opoku and Adam Ercanbrack
+- Codebook created by: Emmanuel Opoku and Adam Ercanbrack _
 - Date: October 25, 2023
 
 # Files contained in the Githhub
