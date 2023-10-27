@@ -92,12 +92,12 @@ Brewery Dataset Variable Information
    - Missing Values: None
 
 3. Variable: City
-   - Description: City where brewery is located.
+   - Description: City where the brewery is located.
    - Data Type:  Character
    - Missing Values: None
 
 3. Variable: State
-   - Description: US State where brewery is located.
+   - Description: US State where the brewery is located.
    - Data Type:  Character
    - Missing Values: None
 
@@ -105,7 +105,7 @@ Brewery Dataset Variable Information
 
 ** Data Cleaning and Transformation **
 
-- Missing Values: Following missing values were found:
+- Missing Values: The following missing values were found:
 Beer Dataset: IBU (1005 records), ABV (62 records), Style (4 records)
 -  Missing values treatment:
 We do not know why there are gaps in the data for the IBU and ABV. So, we assumed that the data was missing at random (MAR) and would be treated as such.
@@ -113,10 +113,10 @@ Missing data imputation - first by seeking open-source information on the values
 - Outliers: No Significant outliers were detected in either dataset
 - Data Transformation: No data transformation has been applied to the original data.
 
-** Additional Notes **
-Additional Datasets were sourced online and were used to supplement and enhance our analysis. These datasets are optional and not an initial requirement for the analysis.
-US_locations_Data  – Used for our geographical map visualization to enhance the storytelling
-US Cities Data – Sourced online from https://simplemaps.com/data/us-cities and used in the geographical map visualization as well.
+** Additional Notes **  
+Additional Datasets were sourced online and were used to supplement and enhance our analysis. These datasets are optional and not an initial requirement for the analysis:  
+US_locations_Data  – Used for our geographical map visualization to enhance the storytelling  
+US Cities Data – Sourced online from https://simplemaps.com/data/us-cities and used in the geographical map visualization as well.  
 Beer Consumption by State – Used to provide further insights on how much consumption by state
 
 
@@ -128,7 +128,7 @@ Beer Consumption by State – Used to provide further insights on how much consu
 
 1. Beers.CSV contains beer data  
 2. Breweries.csv contains breweries' data  
-3. Codebook for beers and breweries is the codebook with variable information  
+3. The codebook for beers and breweries is the codebook with variable information  
 4. mid_term_project_code final.Rmd is the R markdown file for the project  
 5. mid_term_project_code-final.html is the knitted R markdown file  
-6. us_locations_data.csv, uscities.csv, ConsumptionByState.csv are additional files used in enhancing our analysis  
+6. us_locations_data.csv, uscities.csv, and ConsumptionByState.csv are additional files used in enhancing our analysis  
