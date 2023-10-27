@@ -1,9 +1,8 @@
 ---
 title: "DDS Mid-term Project Code"
-author: "Adam E."
-date: "`r Sys.Date()`"
-output: html_document:
-  theme: cerulean # Replace with your desired theme
+author: "Adam E., Emmanuel. O"
+output: html_document
+theme: cerulean
 ---
 
 ```{r setup, include=FALSE}
@@ -59,14 +58,14 @@ library(caret)
 # This data was collected in January 2017 from CraftCans.com.
 #Question 2:	Merge beer data with the breweries data. Print the first 6 observations and the last six observations to check the merged file.  (RMD only, this does not need to be included in the presentation or the deck.)
 ```{r csv_import_join}
-Path <- "D:/University/SMU/Doing_Data_Science/DDS_repository/Doing-Data-Science/Unit7/Beers.csv"
+Path <- "C:/Users/hp/Desktop/SMU Classes/Doing Data Science/Beers.csv"
 Beer_Data = read.csv(Path, header=TRUE)
+Beer_Data
 #Beer_Data
 
-Path2 <- "D:/University/SMU/Doing_Data_Science/DDS_repository/Doing-Data-Science/Unit7/Breweries.csv"
+Path2 <- "C:/Users/hp/Desktop/SMU Classes/Doing Data Science/Breweries.csv"
 Breweries_Data = read.csv(Path2, header=TRUE)
 #Breweries_Data
-
 # Merge the data on the ID
 merged_data <- inner_join(Beer_Data, Breweries_Data, by = c("Brewery_id" = "Brew_ID"))
 merged_data
@@ -119,7 +118,7 @@ unique_states
 # write.csv(merged_data2, file = WritePath, row.names = FALSE)
 
 # Import the new data with additional IBU info
-Path3 <- "D:/University/SMU/Doing_Data_Science/DDS_repository/Doing-Data-Science/Mid-term_project/beer_data_updated.csv"
+Path3 <- "C:/Users/hp/Desktop/SMU Classes/Doing Data Science/beer_data_updated.csv"
 beer_data_updated = read.csv(Path3, header=TRUE)
 
 # replace the old IBU values with the new IBU values
@@ -183,7 +182,7 @@ merged_data5
 
 # This US city data comes from https://simplemaps.com/data/us-cities
 ```{r more_city_loc}
-Path2 <- "D:/University/SMU/Doing_Data_Science/DDS_repository/Doing-Data-Science/Mid-term/uscities.csv"
+Path2 <- "C:/Users/hp/Desktop/SMU Classes/Doing Data Science/uscities.csv"
 cities_Data = read.csv(Path2, header=TRUE)
 
 cities_Data2 <- cities_Data %>%
@@ -228,7 +227,7 @@ ggplot(data = NAFTA,
  geom_point(data = lmerged_data3, color = "red",
             aes(x = lng, y = lat, group = NULL))
 
-WritePath <- "D:/University/SMU/Doing_Data_Science/DDS_repository/Doing-Data-Science/Unit7/us_locations_data.csv"
+WritePath <- "C:/Users/hp/Desktop/SMU Classes/Doing Data Science/us_locations_data.csv"
 
 write.csv(lmerged_data3, file = WritePath, row.names = FALSE)
 lmerged_data3
@@ -282,6 +281,16 @@ state_centers <- data.frame(region = tolower(state.name), long = state.center$x,
 
 # Merge the state centers data with the brewery count data
 state_centers <- merge(state_centers, brewery_count,  by.x = "region", by.y = "State")
+
+#Create a barchart with State numbers
+Breweries_Data %>% ggplot(aes(x = State)) + geom_bar(stat = "count", fill = "blue") +
+  geom_text(stat='count',aes(label=..count..),vjust=-1) +
+  labs(
+    title = "Number of Breweries in each State",
+    x = "State",
+    y = "Count of Breweries"
+  ) +
+  theme_minimal()
 
 # Create the heatmap with state numbers
 ggplot(state_data, aes(x = long, y = lat)) +
@@ -611,7 +620,7 @@ ggplot(merged_data6[merged_data6$Ale_Style != "other beer", ], aes(x = IBU, y = 
 
 
 ```{r import_beer_consumption_data}
-Path <- "D:/University/SMU/Doing_Data_Science/DDS_repository/Doing-Data-Science/Mid-Term_project/ConsumptionByState.csv"
+Path <- "C:/Users/hp/Desktop/SMU Classes/Doing Data Science/ConsumptionByState.csv"
 Consumption_Data = read.csv(Path, header=TRUE)
 Consumption_Data
 Consumption_Data2 <- Consumption_Data %>%
