@@ -1,5 +1,6 @@
 # DDS-MidtermProject  
-# This GitHub contains the project background, the source code, and all other files for the mid-term project. It also includes general information  
+This GitHub contains the project background, the source code, and all other files for the mid-term project. It also includes general information  
+
 The purpose of this project is to perform an analysis of beer and brewery data to provide insight to management to drive their decision-making  
 
 # General Information: https://thegrowlerguys.com/understanding-abv-and-ibu/  
