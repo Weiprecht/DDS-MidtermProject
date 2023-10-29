@@ -150,4 +150,6 @@ Beer Consumption by State – Used to provide further insights on how much consu
 3. The codebook for beers and breweries is the codebook with variable information  
 4. mid_term_project_code final.Rmd is the R markdown file for the project  
 5. mid_term_project_code-final.html is the knitted R markdown file  
-6. us_locations_data.csv, uscities.csv, and ConsumptionByState.csv are additional files used in enhancing our analysis  
+6. us_locations_data.csv, uscities.csv, and ConsumptionByState.csv are additional files used in enhancing our analysis
+7. The mp4 video is a recording of the presentation.
+   
